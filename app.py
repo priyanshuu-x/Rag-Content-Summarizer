@@ -98,7 +98,18 @@ if st.button("Summarize the Content from YT or Website"):
                 video_id = extract_video_id(generic_url)
 
                 # Fetch transcript
-                transcript = YouTubeTranscriptApi.get_transcript(video_id)
+                try:
+                    transcript = YouTubeTranscriptApi.get_transcript(video_id)
+
+                    text = " ".join(
+                    [item["text"] for item in transcript]
+                    )
+
+                except Exception:
+                    st.error("Could not fetch YouTube transcript. "
+                             "The video may not have captions enabled."
+                    )
+                    st.stop()
 
                 # Convert transcript to text
                 text = " ".join([item["text"] for item in transcript])
