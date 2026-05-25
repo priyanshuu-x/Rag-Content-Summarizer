@@ -98,10 +98,10 @@ if st.button("Summarize the Content from YT or Website"):
                 video_id = extract_video_id(generic_url)
 
                 # Fetch transcript
-                transcript = YouTubeTranscriptApi().fetch(video_id)
+                transcript = YouTubeTranscriptApi.get_transcript(video_id)
 
                 # Convert transcript to text
-                text = " ".join([item.text for item in transcript])
+                text = " ".join([item["text"] for item in transcript])
 
             # Website URL
             else:
