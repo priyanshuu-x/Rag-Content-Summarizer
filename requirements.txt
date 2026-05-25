@@ -3,6 +3,7 @@ langchain
 langchain-community
 langchain-groq
 langchain-huggingface
+langchain-text-splitters
 sentence-transformers
 faiss-cpu
 validators==0.28.1
@@ -11,3 +12,4 @@ unstructured
 pytube
 torch==2.2.2
 torchvision==0.17.2
+numpy<2
