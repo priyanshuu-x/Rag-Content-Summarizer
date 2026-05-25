@@ -16,7 +16,6 @@ faiss-cpu
 langchain_chroma
 duckdb
 pandas
-openai
 langchain-groq
 duckduckgo_search==5.3.1b1
 pymupdf
@@ -30,3 +29,5 @@ unstructured
 pytube
 numexpr
 huggingface_hub
+torch
+torchvision
